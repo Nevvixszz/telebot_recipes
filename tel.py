@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-bot = telebot.TeleBot("8367813428:AAHFnC_nl_kyToj51RC-E_N3TKPQU6Yc88U")
+bot = telebot.TeleBot("Введи сюда свой токен бота")
 user_choice = {}
 from salats import salat
 
@@ -13,7 +13,7 @@ def keybord():
 def start(message):
     bot.send_message(message.chat.id, "Привет!\n\nЯ - твой помощник по еде!\n\nХочешь начать готовить? Нажимай на /food или на клавиатуру снизу.", reply_markup=keybord())
 @bot.message_handler(func=lambda message: message.text == '🔍 Поиск по ID')
-def search_button(message):
+def kakashka(message):
     send(message)
 @bot.message_handler(commands=['food'])
 def send(message):
